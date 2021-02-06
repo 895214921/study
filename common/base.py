@@ -27,9 +27,6 @@ class BasePage():
                 logging.error(f'定位元素失败{e}')
         return el
 
-
-
-
     def wait_visibility_of_element_located (self,timeout,locate):
         """显性等待，元素是否可见"""
         el=WebDriverWait(self.browser,timeout=timeout).until(expected_conditions.visibility_of_element_located(locate))
